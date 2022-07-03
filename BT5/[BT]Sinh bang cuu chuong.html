@@ -5,22 +5,15 @@
     <title>[BT]Bang cuu chuong</title>
 </head>
 <body>
-    <script language="JavaScript" >
-            let sout, i, j;
-        sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
-        i = j = 1;
-        while (i <= 10) {
-            sout = sout + "<tr>";
-            while (j <= 10) {
-                sout = sout + "<td>" + i * j + "</td>";
-                j++;
-            }
-            sout = sout + "</tr>";
-            j = 1;
-            i++;
-        }
-        sout = sout + "</table>";
-        document.write(sout);
+    <script>
+        let tab = "<table border='3' width='1000' cellspacing='0' cellpadding='3'>";
+        for (let i=1; i<=9; i++){
+            tab = tab + "<tr>"
+            for (let j=2; j<=9;j++){
+                tab = tab + "<td>"+j+"x"+i+"="+j*i+"</td>"
+            } tab = tab + "</tr>"
+        } tab = tab + "</table>"
+        document.write(tab)
     </script>
 </body>
 </html>
