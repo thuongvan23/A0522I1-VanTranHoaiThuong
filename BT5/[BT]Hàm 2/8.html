@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8</title>
+</head>
+<body>
+    <button onclick="change()">Change</button>
+    <h2 id="result"></h2>
+    <script>
+        let a = [];
+        let n = parseInt(prompt("Nhap do dai cua mang: "));
+        for (let i=0;i<n;i++){
+            a[i] = prompt("Nhap gia tri thu "+(i+1)+"cua mang: ")
+        }
+        document.getElementById("result").innerHTML = a;
+        function change() {
+            for (let i=0;i<(n+1)/2;i++){
+                let b = a[i];
+                a[i] = a[n-i];
+                a[n-i] = b;
+            }
+            document.getElementById("result").innerHTML = a;
+        }
+    </script>
+</body>
+</html>
